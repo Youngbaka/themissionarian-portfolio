@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>themisssionarian.com — Web3 Community, AI Annotation & Digital Content</title>
+  <meta name="description" content="Portfolio, Work Experience, Services, and AI Annotation Trials Showcase by Marclioun Zalabaka (themisssionarian.com)." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
+            },
+            accent: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .glass-card {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(100, 116, 139, 0.35); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(100, 116, 139, 0.55); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-40 border-b border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-950/80 glass-card">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-600 to-emerald-500 flex items-center justify-center text-white font-mono font-bold text-sm shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+          TM
+        </span>
+        <div>
+          <span class="font-bold tracking-tight text-base sm:text-lg">themisssionarian<span class="text-indigo-600 dark:text-indigo-400">.com</span></span>
+          <span class="hidden md:inline-block ml-2 text-[11px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+            Available for Remote Roles
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#services" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Services</a>
+        <a href="#annotation-lab" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+          AI Annotation Lab
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        </a>
+        <a href="#portfolio" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Portfolio</a>
+        <a href="#experience" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggle" aria-label="Toggle color theme" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 text-slate-600 dark:text-slate-300 transition-colors">
+          <svg id="sunIcon" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg id="moonIcon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contact" class="px-3.5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-semibold shadow-sm transition-colors">
+          Hire / Collaborate
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-14 pb-20 sm:pt-20 sm:pb-28 border-b border-slate-200/70 dark:border-slate-800/70">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-500/10 via-transparent to-emerald-500/10"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-700 dark:text-indigo-300 text-xs font-mono mb-6">
+          <span>Marclioun Zalabaka</span>
+          <span>•</span>
+          <span>Web3 Operations, AI Evaluation &amp; Automation</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+          Scaling <span class="gradient-text">Web3 Communities</span>, Training Smarter AI, &amp; Building Automated Workflows.
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8 max-w-2xl">
+          Welcome to <strong>themisssionarian.com</strong> — my central hub showcasing hands-on experience in community moderation, guideline-driven AI data annotation &amp; RLHF evaluation, short-form visual storytelling, and practical no-code/Python automation.
+        </p>
+        <div class="flex flex-wrap items-center gap-3.5">
+          <a href="#annotation-lab" class="px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-lg shadow-indigo-600/20 transition-all flex items-center gap-2">
+            Explore AI Annotation Vault
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#portfolio" class="px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900 font-semibold text-sm transition-colors">
+            View Selected Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Key Metrics Bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14 pt-10 border-t border-slate-200/80 dark:border-slate-800/80">
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">5+ Yrs</div>
+          <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Customer &amp; Community Ops</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">RLHF &amp; QA</div>
+          <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">AI Evaluation &amp; Rubric Grading</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">Web3 / DeFi</div>
+          <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Discord, Telegram &amp; X Growth</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">n8n + Python</div>
+          <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Bots, Webhooks &amp; Signal Scanners</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 border-b border-slate-200/70 dark:border-slate-800/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">Core Capabilities</span>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-2">Services I Provide</h2>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 max-w-md">
+          Delivering structured human judgment, active community leadership, and automated digital workflows for remote teams.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Service 1 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-all shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">AI Data Annotation &amp; Model Evaluation</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+            Guideline-strict RLHF response ranking, SFT prompt-response authoring, hallucination auditing, red-teaming edge cases, and multi-rubric QA.
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">RLHF</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Rubric QA</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Factuality</span>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Web3 Community Management</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+            24/7 Discord &amp; Telegram moderation, anti-scam protection, holder onboarding, governance discussions, and high-energy X/Twitter engagement raids.
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Discord</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Telegram</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">X Raids</span>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 hover:border-purple-500/50 transition-all shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Short-Form Video &amp; AI Visuals</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+            High-retention promotional reels, cinematic AI-assisted storytelling, motion graphics, and branded social clips built with CapCut Pro &amp; After Effects.
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">CapCut Pro</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">After Effects</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">AI Video</span>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 hover:border-amber-500/50 transition-all shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Workflow &amp; Bot Automation</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+            Automated Telegram VIP access systems with Paystack webhooks, n8n on-chain token signal scanners, and Google Sheets live reporting pipelines.
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">n8n</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Python/Flask</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Webhooks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive AI Annotation Services & Trials Vault -->
+  <section id="annotation-lab" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-b border-slate-200/70 dark:border-slate-800/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10">
+        <div>
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-semibold mb-2">
+            INTERACTIVE SHOWCASE &amp; UPLOAD VAULT
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">AI Annotation Services &amp; Trials</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+            A verified log of my annotation methodologies, platform qualification assessments, rubric evaluations, and sample tasks. Add or upload new trials directly below.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button onclick="openUploadModal()" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-md shadow-emerald-600/20 flex items-center gap-2 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+            Add / Upload Trial
+          </button>
+          <button onclick="exportUpdatedHtml()" title="Download an updated index.html with your newly added trials permanently saved for GitHub/Render" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs sm:text-sm font-semibold flex items-center gap-2 transition-colors">
+            <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Save &amp; Export HTML
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2 mb-8" id="annotationFilters">
+        <button data-filter="all" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition-colors">All Trials &amp; Services</button>
+        <button data-filter="RLHF & Ranking" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-colors">RLHF &amp; Ranking</button>
+        <button data-filter="Technical & Security Eval" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-colors">Technical &amp; Security Eval</button>
+        <button data-filter="Prompt Engineering & SFT" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-colors">Prompt Engineering &amp; SFT</button>
+        <button data-filter="Multimodal & Video QA" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-colors">Multimodal &amp; Video QA</button>
+      </div>
+
+      <!-- Trials Grid -->
+      <div id="trialsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 border-b border-slate-200/70 dark:border-slate-800/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="mb-12">
+        <span class="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">Featured Work</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-2">Selected Portfolio</h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
+          Production automation systems, Web3 community initiatives, and high-engagement digital media.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <article class="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex flex-col">
+          <div class="h-44 bg-gradient-to-br from-indigo-900 via-slate-900 to-emerald-950 p-6 flex flex-col justify-between relative overflow-hidden">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-mono">LIVE PRODUCTION</span>
+              <span class="text-xs font-mono text-slate-400">Python • Flask • Paystack</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">Naija Remote Tech &amp; AI VIP Bot</h3>
+              <p class="text-xs text-slate-300 mt-1">Automated Payment &amp; One-Time Invite Link Provisioning</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5">
+              Engineered an end-to-end Telegram VIP membership automation service hosted on Render. Verifies live Paystack webhook signatures, generates single-use expiring Telegram invite links, and automates member onboarding with zero manual intervention.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500 dark:text-slate-400">
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">Telegram Bot API</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">Paystack Webhooks</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">Render Cloud</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex flex-col">
+          <div class="h-44 bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 p-6 flex flex-col justify-between relative overflow-hidden">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-mono">ON-CHAIN SCANNER</span>
+              <span class="text-xs font-mono text-slate-400">n8n • Helius RPC • Sheets</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">FalconScan — Solana Signal Pipeline</h3>
+              <p class="text-xs text-slate-300 mt-1">Real-Time Token &amp; Liquidity Monitoring Engine</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5">
+              Built an automated n8n workflow powered by Helius mainnet webhooks, <code class="text-xs bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded">getAsset</code> RPC calls, and DexScreener APIs to filter emerging Solana tokens, evaluate liquidity thresholds, and log structured alerts into Google Sheets.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500 dark:text-slate-400">
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">n8n Automation</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">Solana Mainnet</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">DexScreener API</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex flex-col">
+          <div class="h-44 bg-gradient-to-br from-emerald-950 via-slate-900 to-teal-950 p-6 flex flex-col justify-between relative overflow-hidden">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-mono">WEB3 ECOSYSTEM</span>
+              <span class="text-xs font-mono text-slate-400">Discord • Telegram • X</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">D/ACC &amp; Maxbid Community Operations</h3>
+              <p class="text-xs text-slate-300 mt-1">Moderation, Advocacy &amp; Social Growth Campaigns</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5">
+              Managed high-velocity Telegram and Discord hubs for A Defensive Acceleration Advocacy (D/ACC) at Robinhood Blockchain and drove organic X/Twitter campaign visibility as a Social Media Engagement Specialist at Maxbid.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500 dark:text-slate-400">
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">Community Security</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">Social Raids</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">User Retention</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-all flex flex-col">
+          <div class="h-44 bg-gradient-to-br from-rose-950 via-slate-900 to-amber-950 p-6 flex flex-col justify-between relative overflow-hidden">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-mono">CREATIVE MEDIA</span>
+              <span class="text-xs font-mono text-slate-400">CapCut Pro • AE • AI Gen</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">AI-Assisted Cinematic Short-Form Studio</h3>
+              <p class="text-xs text-slate-300 mt-1">Promotional Reels, Analog Aesthetics &amp; Motion Graphics</p>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5">
+              Produced 100+ short-form promotional videos and brand reels across TikTok, Instagram, X, and YouTube—blending generative AI visual sequences, analog film grain textures, and crisp kinetic typography.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-500 dark:text-slate-400">
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">Short-Form Video</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">Motion Design</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">Brand Storytelling</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience & Education Section -->
+  <section id="experience" class="py-20 border-b border-slate-200/70 dark:border-slate-800/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="mb-12">
+        <span class="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 font-semibold">Career Track Record</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mt-2">Work Experience &amp; Education</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-10">
+        <!-- Timeline Column -->
+        <div class="lg:col-span-2 space-y-8 relative before:absolute before:inset-0 before:ml-4 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-indigo-500 before:via-slate-300 dark:before:via-slate-700 before:to-transparent">
+          
+          <!-- Role 1 -->
+          <div class="relative flex items-start gap-6">
+            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 z-10 shadow-md mt-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-white"></span>
+            </div>
+            <div class="flex-1 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h3 class="text-lg font-bold">Web3 Community Manager &amp; Moderator</h3>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Sep 2026 — Present</span>
+              </div>
+              <div class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-3">A Defensive Acceleration Advocacy (D/ACC) — Robinhood Blockchain (Remote)</div>
+              <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside">
+                <li>Moderate and scale active Telegram and Discord channels, enforcing security protocols and preventing phishing/spam attacks.</li>
+                <li>Facilitate technical and governance discussions around defensive acceleration (d/acc) principles and ecosystem updates.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="relative flex items-start gap-6">
+            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center shrink-0 z-10 shadow-md mt-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-white"></span>
+            </div>
+            <div class="flex-1 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h3 class="text-lg font-bold">Social Media Engagement Specialist</h3>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Jan 2025 — Present</span>
+              </div>
+              <div class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-3">Maxbid (Remote)</div>
+              <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside">
+                <li>Execute targeted Web3 social media raids, campaign amplification, and real-time community engagement across X/Twitter.</li>
+                <li>Track campaign sentiment and drive organic conversation velocity around product launches.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="relative flex items-start gap-6">
+            <div class="w-8 h-8 rounded-full bg-slate-700 text-white flex items-center justify-center shrink-0 z-10 shadow-md mt-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-white"></span>
+            </div>
+            <div class="flex-1 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h3 class="text-lg font-bold">Freelance Video Editor &amp; Digital Content Creator</h3>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Jun 2024 — Jan 2026</span>
+              </div>
+              <div class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-3">Remote / Independent</div>
+              <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside">
+                <li>Produced short-form promotional videos, reels, and branded motion assets for TikTok, Instagram, X, and YouTube.</li>
+                <li>Integrated AI-assisted video workflows with CapCut Pro, Canva, and Adobe After Effects to cut turnaround times.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 4 -->
+          <div class="relative flex items-start gap-6">
+            <div class="w-8 h-8 rounded-full bg-slate-700 text-white flex items-center justify-center shrink-0 z-10 shadow-md mt-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-white"></span>
+            </div>
+            <div class="flex-1 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h3 class="text-lg font-bold">Customer Care Executive</h3>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Dec 2019 — 2024</span>
+              </div>
+              <div class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-3">iSON BPO (Nigeria)</div>
+              <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1.5 list-disc list-inside">
+                <li>Resolved high-volume customer inquiries, de-escalated complex disputes, and maintained strict SLA quality scores.</li>
+                <li>Built foundational communication clarity and structured documentation habits essential for AI evaluation guidelines.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education & Certifications Sidebar -->
+        <div class="space-y-6">
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+              <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+              Education &amp; Credentials
+            </h3>
+            <div class="space-y-4">
+              <div class="pb-4 border-b border-slate-100 dark:border-slate-800">
+                <div class="font-semibold text-sm">B.Sc. in Sociology</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">University of Jos • 2013 – 2017</div>
+              </div>
+              <div class="pb-4 border-b border-slate-100 dark:border-slate-800">
+                <div class="font-semibold text-sm">Customer Care Executive Certificate</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">iSON BPO • 2019</div>
+              </div>
+              <div>
+                <div class="font-semibold text-sm">AI Evaluation &amp; Technical Assessment Track</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Guideline-Based RLHF &amp; Security Capture Evaluations • 2026</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-gradient-to-br from-indigo-600 to-emerald-600 text-white shadow-lg">
+            <h3 class="text-lg font-bold mb-2">Looking for a detail-obsessed AI Annotator or Web3 Mod?</h3>
+            <p class="text-xs text-indigo-100 leading-relaxed mb-4">
+              Available for remote AI training contracts, rubric QA, community management, and workflow automation projects.
+            </p>
+            <a href="#contact" class="inline-block w-full text-center py-2.5 rounded-xl bg-white text-slate-900 font-bold text-xs hover:bg-slate-100 transition-colors">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
+  <footer id="contact" class="py-16 bg-white dark:bg-slate-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-slate-200 dark:border-slate-800">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Let’s work together.</h2>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+            Reach out directly via X/Twitter, GitHub, or Telegram for remote roles and collaborations.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://x.com/its_youngbaka" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-indigo-500 text-sm font-semibold transition-colors">
+            X / @its_youngbaka
+          </a>
+          <a href="https://github.com/Youngbaka" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-indigo-500 text-sm font-semibold transition-colors">
+            GitHub / Youngbaka
+          </a>
+          <a href="https://youngbaka.github.io" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold transition-colors">
+            GitHub Pages Hub
+          </a>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
+        <div>&copy; <span id="year"></span> <strong>themisssionarian.com</strong> — Marclioun Zalabaka. All rights reserved.</div>
+        <div class="font-mono">Hosted on Render • Built for Speed &amp; Clarity</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Add / Upload AI Annotation Trial -->
+  <div id="uploadModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between mb-5">
+        <h3 class="text-xl font-bold">Add / Upload Annotation Trial</h3>
+        <button onclick="closeUploadModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <form id="trialForm" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Trial / Assessment Title *</label>
+          <input type="text" id="trialTitle" required placeholder="e.g., Multi-Turn RLHF Coding & Factuality Trial" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:border-indigo-500" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Category *</label>
+            <select id="trialCategory" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:border-indigo-500">
+              <option value="RLHF & Ranking">RLHF &amp; Ranking</option>
+              <option value="Technical & Security Eval">Technical &amp; Security Eval</option>
+              <option value="Prompt Engineering & SFT">Prompt Engineering &amp; SFT</option>
+              <option value="Multimodal & Video QA">Multimodal &amp; Video QA</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Platform / Track</label>
+            <input type="text" id="trialPlatform" placeholder="e.g., micro1 / Capture Doc" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:border-indigo-500" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Result / Score Badge</label>
+          <input type="text" id="trialScore" placeholder="e.g., Passed • Expert Track / 98% Rubric Accuracy" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:border-indigo-500" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Methodology &amp; Summary *</label>
+          <textarea id="trialSummary" rows="3" required placeholder="Describe the evaluation guidelines, edge cases caught, or annotation rubric applied..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Upload Screenshot, Certificate, or Sample File (Optional)</label>
+          <input type="file" id="trialFile" accept="image/*,.pdf,.txt,.json,.md" class="w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-3.5 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 dark:file:bg-indigo-950 dark:file:text-indigo-300 hover:file:bg-indigo-100" />
+          <p class="text-[11px] text-slate-400 mt-1">Images display directly on the card; documents attach as downloadable proof.</p>
+        </div>
+
+        <div class="pt-2 flex items-center justify-end gap-2.5">
+          <button type="button" onclick="closeUploadModal()" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-sm font-semibold">Cancel</button>
+          <button type="submit" class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold shadow-sm">Add to Showcase</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Embedded Default Trials Data (Updated automatically when you click Save & Export HTML) -->
+  <script id="initial-trials-data" type="application/json">
+  [
+    {
+      "id": "trial-1",
+      "title": "Advanced & Expert Security Evaluation Track",
+      "category": "Technical & Security Eval",
+      "platform": "Structured Capture Doc",
+      "score": "Completed • Multi-Level",
+      "date": "Nov 2026",
+      "summary": "Conducted multi-tier web application vulnerability assessments and structured capture documentation, evaluating model safety boundaries and technical accuracy under strict rubric criteria.",
+      "fileName": "",
+      "fileData": "",
+      "fileType": ""
+    },
+    {
+      "id": "trial-2",
+      "title": "Guideline-Strict RLHF Preference Ranking",
+      "category": "RLHF & Ranking",
+      "platform": "AI Data Annotation Assessment",
+      "score": "Verified Rubric QA",
+      "date": "Oct 2026",
+      "summary": "Evaluated side-by-side LLM completions across instruction-following, truthfulness, tone calibration, and hallucination detection with detailed justification rationales.",
+      "fileName": "",
+      "fileData": "",
+      "fileType": ""
+    },
+    {
+      "id": "trial-3",
+      "title": "Spoken Reasoning & Technical Domain Evaluation",
+      "category": "Prompt Engineering & SFT",
+      "platform": "micro1 AI Interview Track",
+      "score": "Qualification Assessment",
+      "date": "Nov 2026",
+      "summary": "Demonstrated real-time analytical decomposition, edge-case identification, and clear verbal articulation of evaluation criteria for complex AI training tasks.",
+      "fileName": "",
+      "fileData": "",
+      "fileType": ""
+    },
+    {
+      "id": "trial-4",
+      "title": "Short-Form Video & Visual Prompt Alignment QA",
+      "category": "Multimodal & Video QA",
+      "platform": "AI Creative Workflows",
+      "score": "100+ Production Clips",
+      "date": "2025 – 2026",
+      "summary": "Assessed generative AI visual outputs for temporal consistency, artifact distortion, prompt adherence, and pacing accuracy across promotional media campaigns.",
+      "fileName": "",
+      "fileData": "",
+      "fileType": ""
+    }
+  ]
+  </script>
+
+  <script>
+    // Theme Management
+    const htmlEl = document.documentElement;
+    const savedTheme = localStorage.getItem('tm_theme');
+    if (savedTheme === 'light') {
+      htmlEl.classList.remove('dark');
+    } else {
+      htmlEl.classList.add('dark');
+    }
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      htmlEl.classList.toggle('dark');
+      localStorage.setItem('tm_theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Load Trials (merges embedded JSON with any browser-saved additions)
+    const STORAGE_KEY = 'themisssionarian_trials_v1';
+    function loadTrials() {
+      const embedded = JSON.parse(document.getElementById('initial-trials-data').textContent);
+      const local = localStorage.getItem(STORAGE_KEY);
+      if (local) {
+        try {
+          const parsed = JSON.parse(local);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        } catch (e) {}
+      }
+      return embedded;
+    }
+
+    let trials = loadTrials();
+    let currentFilter = 'all';
+
+    function saveTrialsToLocal() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(trials));
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderTrials() {
+      const grid = document.getElementById('trialsGrid');
+      const filtered = currentFilter === 'all'
+        ? trials
+        : trials.filter(t => t.category === currentFilter);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500 dark:text-slate-400 text-sm">No trials found in this category yet. Click <strong>Add / Upload Trial</strong> to add one.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(trial => {
+        const isImage = trial.fileData && trial.fileType && trial.fileType.startsWith('image/');
+        const hasDoc = trial.fileData && !isImage;
+
+        return `
+          <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-sm hover:border-emerald-500/40 transition-all">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-[11px] font-mono font-semibold">
+                  ${escapeHtml(trial.category)}
+                </span>
+                <span class="text-xs font-mono text-slate-400">${escapeHtml(trial.date || '2026')}</span>
+              </div>
+
+              <h3 class="text-lg font-bold leading-snug mb-1.5">${escapeHtml(trial.title)}</h3>
+              <div class="text-xs font-medium text-emerald-600 dark:text-emerald-400 mb-3">
+                ${escapeHtml(trial.platform)} ${trial.score ? '• ' + escapeHtml(trial.score) : ''}
+              </div>
+
+              ${isImage ? `
+                <div class="mb-4 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-950">
+                  <img src="${trial.fileData}" alt="${escapeHtml(trial.title)}" class="w-full h-40 object-cover" />
+                </div>
+              ` : ''}
+
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                ${escapeHtml(trial.summary)}
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+              ${hasDoc ? `
+                <a href="${trial.fileData}" download="${escapeHtml(trial.fileName || 'trial-proof')}" class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  ${escapeHtml(trial.fileName || 'View Attachment')}
+                </a>
+              ` : `<span class="text-[11px] font-mono text-slate-400">Verified Entry</span>`}
+
+              <button onclick="deleteTrial('${trial.id}')" class="text-xs text-slate-400 hover:text-rose-500 transition-colors" title="Remove entry">
+                Remove
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Filter Buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('bg-indigo-600', 'text-white');
+          b.classList.add('bg-white', 'dark:bg-slate-900', 'border', 'border-slate-200', 'dark:border-slate-800');
+        });
+        btn.classList.remove('bg-white', 'dark:bg-slate-900', 'border', 'border-slate-200', 'dark:border-slate-800');
+        btn.classList.add('bg-indigo-600', 'text-white');
+        currentFilter = btn.dataset.filter;
+        renderTrials();
+      });
+    });
+
+    // Modal Controls
+    const modal = document.getElementById('uploadModal');
+    function openUploadModal() {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+    function closeUploadModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.getElementById('trialForm').reset();
+    }
+
+    function deleteTrial(id) {
+      if (!confirm('Remove this trial from your showcase?')) return;
+      trials = trials.filter(t => t.id !== id);
+      saveTrialsToLocal();
+      renderTrials();
+    }
+
+    // Form Submission with File Attachment Support
+    document.getElementById('trialForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const title = document.getElementById('trialTitle').value.trim();
+      const category = document.getElementById('trialCategory').value;
+      const platform = document.getElementById('trialPlatform').value.trim() || 'Independent Trial';
+      const score = document.getElementById('trialScore').value.trim();
+      const summary = document.getElementById('trialSummary').value.trim();
+      const fileInput = document.getElementById('trialFile');
+      const file = fileInput.files[0];
+
+      const addEntry = (fileData = '', fileName = '', fileType = '') => {
+        const now = new Date();
+        const monthYear = now.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+        trials.unshift({
+          id: 'trial-' + Date.now(),
+          title,
+          category,
+          platform,
+          score,
+          date: monthYear,
+          summary,
+          fileData,
+          fileName,
+          fileType
+        });
+        saveTrialsToLocal();
+        renderTrials();
+        closeUploadModal();
+      };
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => addEntry(reader.result, file.name, file.type);
+        reader.readAsDataURL(file);
+      } else {
+        addEntry();
+      }
+    });
+
+    // Export standalone HTML with all newly uploaded trials baked in for Render/GitHub
+    function exportUpdatedHtml() {
+      const dataScript = document.getElementById('initial-trials-data');
+      dataScript.textContent = '\n' + JSON.stringify(trials, null, 2) + '\n';
+      const fullHtml = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      const blob = new Blob([fullHtml], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'index.html';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    renderTrials();
+  </script>
+</body>
+</html>
